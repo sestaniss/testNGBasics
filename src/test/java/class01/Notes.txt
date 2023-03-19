@@ -1,0 +1,59 @@
+***********************Review****************************
+
+1. Pom.xml
+we put all of our dependencies
+<dependencies>
+
+
+</dependencies>
+
+when we want to load the dependencies as there are red errors
+we right-click and reload the maven
+
+
+2. Annotations:
+
+1. @Test:
+        every test case is written is @Test annotation
+        whenever we run a class all @Test annotations will be executed
+        we can also run them individually
+
+2. @BeforeMethod:
+        pre-condition and will execute always before the @Test annotation
+
+3. @AfterMethod:
+        post-condition and will execute always after @Test annotation
+
+3. Priority:
+
+    by default: 0 is the highest
+    @Test(oriority=1)
+
+    priority flows in this order
+    0,1,2,3,4,5,6,7,8-->
+
+4. Enable and disable:
+
+    @Test(enabled=false)
+    will mark the test case as disabled and will not be part of the execution
+
+    by default enabled=true;
+
+5. Depends on:
+    @Test(dependsonMethod={methodname})
+    the test case is dependent on another test case and if the major test case fails it will not execute it
+
+6. Assertions
+
+Hard assertions:
+
+1. Assert.assertEquals(string,string) --->  compares two strings, if they are equal the assertion will pass
+   if not equal the assertion will fail.
+
+2. Assert.assertTrue(boolean) ---> will fail if booleab false, will pass if boolean is true.
+
+
+Note:
+
+if any assertion in case of hard assertions fails, the code doesn't proceed on with execution, it terminates
+there and marks the test case as a failed test case.
